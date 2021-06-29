@@ -1,0 +1,62 @@
+2021-06-19 11:25:07.958276: W tensorflow/core/platform/cpu_feature_guard.cc:45] The TensorFlow library wasn't compiled to use SSE4.1 instructions, but these are available on your machine and could speed up CPU computations.
+2021-06-19 11:25:07.958315: W tensorflow/core/platform/cpu_feature_guard.cc:45] The TensorFlow library wasn't compiled to use SSE4.2 instructions, but these are available on your machine and could speed up CPU computations.
+2021-06-19 11:25:07.958322: W tensorflow/core/platform/cpu_feature_guard.cc:45] The TensorFlow library wasn't compiled to use AVX instructions, but these are available on your machine and could speed up CPU computations.
+2021-06-19 11:25:07.958327: W tensorflow/core/platform/cpu_feature_guard.cc:45] The TensorFlow library wasn't compiled to use AVX2 instructions, but these are available on your machine and could speed up CPU computations.
+2021-06-19 11:25:07.958332: W tensorflow/core/platform/cpu_feature_guard.cc:45] The TensorFlow library wasn't compiled to use FMA instructions, but these are available on your machine and could speed up CPU computations.
+2021-06-19 11:25:08.134239: I tensorflow/core/common_runtime/gpu/gpu_device.cc:955] Found device 0 with properties: 
+name: TITAN Xp
+major: 6 minor: 1 memoryClockRate (GHz) 1.582
+pciBusID 0000:03:00.0
+Total memory: 11.91GiB
+Free memory: 11.66GiB
+2021-06-19 11:25:08.134270: I tensorflow/core/common_runtime/gpu/gpu_device.cc:976] DMA: 0 
+2021-06-19 11:25:08.134277: I tensorflow/core/common_runtime/gpu/gpu_device.cc:986] 0:   Y 
+2021-06-19 11:25:08.134285: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1045] Creating TensorFlow device (/gpu:0) -> (device: 0, name: TITAN Xp, pci bus id: 0000:03:00.0)
+/home/carlomanzo/anaconda3/envs/deepo/lib/python3.5/site-packages/h5py/__init__.py:36: FutureWarning: Conversion of the second argument of issubdtype from `float` to `np.floating` is deprecated. In future, it will be treated as `np.float64 == np.dtype(float).type`.
+  from ._conv import register_converters as _register_converters
+Using TensorFlow backend.
+/home/carlomanzo/Uri/Uri_sergio/Model_1chan_2chan_numbers.py:57: UserWarning: Update your `Conv2D` call to the Keras 2 API: `Conv2D(64, (1, 1), kernel_initializer="orthogonal", use_bias=False, strides=(1, 1), bias_regularizer=<keras.reg..., kernel_regularizer=<keras.reg..., padding="same")`
+  b_regularizer=l2(weight_decay))(input)
+/home/carlomanzo/Uri/Uri_sergio/Model_1chan_2chan_numbers.py:62: UserWarning: Update your `Conv2D` call to the Keras 2 API: `Conv2D(64, (3, 3), kernel_initializer="orthogonal", use_bias=False, strides=(1, 1), bias_regularizer=<keras.reg..., kernel_regularizer=<keras.reg..., padding="same")`
+  b_regularizer=l2(weight_decay))(input)
+/home/carlomanzo/Uri/Uri_sergio/Model_1chan_2chan_numbers.py:71: UserWarning: Update your `Conv2D` call to the Keras 2 API: `Conv2D(64, (3, 3), kernel_initializer="orthogonal", use_bias=False, strides=(1, 1), bias_regularizer=<keras.reg..., kernel_regularizer=<keras.reg..., padding="same")`
+  b_regularizer=l2(weight_decay))(act_a)
+/home/carlomanzo/Uri/Uri_sergio/Model_1chan_2chan_numbers.py:42: UserWarning: Update your `Conv2D` call to the Keras 2 API: `Conv2D(64, (3, 3), use_bias=False, strides=(1, 1), kernel_initializer="orthogonal", padding="same")`
+  border_mode='same', bias=False)(input)
+/home/carlomanzo/Uri/Uri_sergio/Model_1chan_2chan_numbers.py:142: UserWarning: Update your `Conv2D` call to the Keras 2 API: `Conv2D(2, (1, 1), use_bias=False, activation="linear", name="pred", kernel_initializer="orthogonal", padding="same")`
+  init='orthogonal', name='pred', border_mode='same')(act_)
+/home/carlomanzo/Uri/Uri_sergio/Model_1chan_2chan_numbers.py:154: UserWarning: Update your `Model` call to the Keras 2 API: `Model(inputs=Tensor("in..., outputs=[<tf.Tenso...)`
+  model = Model(input=input_, output=[density_pred, shapes_result, nexs_result])
+Number of testing images: 5000
+Shape:  (5000, 128, 128)
+37.245121479034424
+<class 'list'>
+3
+(5000, 128, 128, 2)
+(5000, 5)
+(5000, 1)
+Visualizing things
+Pred_shapes 0 to 10:
+[[0.0000000e+00 0.0000000e+00 1.0000000e+00 0.0000000e+00 0.0000000e+00]
+ [2.9415559e-09 4.8271151e-08 1.2545572e-32 1.2864424e-15 1.0000000e+00]
+ [2.1072414e-05 1.3598070e-18 0.0000000e+00 4.2559311e-28 9.9997890e-01]
+ [1.0000000e+00 3.6187344e-09 8.5185612e-20 1.1085561e-14 1.9647119e-09]
+ [8.6473308e-35 1.0000000e+00 8.5229821e-20 6.0038209e-16 6.7413009e-22]
+ [0.0000000e+00 1.9753683e-09 0.0000000e+00 1.0000000e+00 2.3934915e-15]
+ [5.3107276e-27 1.1505404e-12 8.0607932e-25 1.0000000e+00 0.0000000e+00]
+ [1.0000000e+00 5.3743738e-27 0.0000000e+00 1.6142195e-37 8.8287546e-09]
+ [1.2687153e-35 9.9896741e-01 2.1604843e-31 1.0323881e-03 2.2435012e-07]
+ [1.7160647e-33 1.0000000e+00 0.0000000e+00 7.9268047e-14 2.4134984e-29]]
+Confusion Matrix:
+[[ 998    0    0    0    2]
+ [   1  998    0    2    0]
+ [   0    0  999    1    0]
+ [   0    0    0  968    0]
+ [   2    4    0    0 1025]]
+Accuracy shapes:  0.9976
+Exception ignored in: <bound method BaseSession.__del__ of <tensorflow.python.client.session.Session object at 0x7fee847117f0>>
+Traceback (most recent call last):
+  File "/home/carlomanzo/anaconda3/envs/deepo/lib/python3.5/site-packages/tensorflow/python/client/session.py", line 701, in __del__
+TypeError: 'NoneType' object is not callable
+swig/python detected a memory leak of type 'int64_t *', no destructor found.
+swig/python detected a memory leak of type 'int64_t *', no destructor found.
