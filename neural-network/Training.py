@@ -138,24 +138,6 @@ def train_(weights_name):
     print('-'*30)
     change_lr = LearningRateScheduler(step_decay)
 
-    # datagen = ImageDataGenerator(
-    #     featurewise_center=False,  # set input mean to 0 over the dataset
-    #     samplewise_center=False,  # set each sample mean to 0
-    #     featurewise_std_normalization=False,  # divide inputs by std of the dataset
-    #     samplewise_std_normalization=False,  # divide each input by its std
-    #     zca_whitening=False,  # apply ZCA whitening
-    #     rotation_range=0,  # randomly rotate images in the range (degrees, 0 to 180)
-    #     width_shift_range=0.,  # randomly shift images horizontally (fraction of total width)
-    #     height_shift_range=0.,  # randomly shift images vertically (fraction of total height)
-    #     zoom_range=0,
-    #     shear_range=0.,
-    #     horizontal_flip=False,  # randomly flip images
-    #     vertical_flip=False,  # randomly flip images
-    #     fill_mode='constant')
-    #
-    # # Fit the image generator on the training data
-    # datagen.fit(new_locs)
-
     # Start image generator
     batch_size = 16
     gen = myGenerator(new_locs, new_imps, new_shape, new_nexs, batch_size=batch_size)
