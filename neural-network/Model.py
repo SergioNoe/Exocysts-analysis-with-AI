@@ -161,7 +161,7 @@ def buildModel_U_net(input_dim):
                       "dense_4": "mse"
                   },
                   loss_weights={
-                      'pred': 1.,
+                      'pred': 100.,
                       'activation_26': 1.,
                       'dense_4': 1.}
                   )
