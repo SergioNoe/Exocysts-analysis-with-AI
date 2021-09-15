@@ -6,6 +6,17 @@ Final master thesis by Sergio Noé
 
 # Structure
 
+![Final structure](https://github.com/SergioNoe/Exocysts-analysis-with-AI/images/structure.jpg)
+
 # Setting up the environment
+
+The environment needed to execute the python files can be found in anaconda.org with the link https://anaconda.org/sergio_noe/deepo
+
+Us ethe following lines of code in the anaconda prompt to download and use the deepo environment.
+
+```bash
+conda env create sergio_noe/deepo
+source activate deepo
+```
 
 # Acknowledgments
