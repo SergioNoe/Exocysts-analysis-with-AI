@@ -82,15 +82,15 @@ def test_model(weights_file):
     end = time.time()
     print(end - start)
 
-    print(type(predicted_density))
-    print(len(predicted_density))
-    print(predicted_density[0].shape)
-    print(predicted_density[1].shape)
-    print(predicted_density[2].shape)
+    # print(type(predicted_density))
+    # print(len(predicted_density))
+    # print(predicted_density[0].shape)
+    # print(predicted_density[1].shape)
+    # print(predicted_density[2].shape)
 
-    print("Visualizing things")
-    print("Pred_shapes 0 to 10:")
-    print(predicted_density[1][0:10])
+    # print("Visualizing things")
+    # print("Pred_shapes 0 to 10:")
+    # print(predicted_density[1][0:10])
 
     shapes = to_categorical(shape)
 
