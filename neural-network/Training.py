@@ -149,7 +149,6 @@ def train_(weights_name):
                         nb_epoch=192,
                         callbacks=[model_checkpoint, change_lr, csv_logger])
 
-    # mdict = {"mean_locs": mean_locs, "std_locs": std_locs, "mean_imps": mean_imps, "std_imps": std_imps}
     sio.savemat("unet_model/Training_dict.mat", mdict)
 
 
