@@ -6,7 +6,7 @@ Final master thesis by Sergio Noé
 
 # Structure
 
-![Final structure](https://github.com/SergioNoe/Exocysts-analysis-with-AI/tree/main/images/Structure.jpg)
+![Final structure](https://github.com/SergioNoe/Exocysts-analysis-with-AI/tree/main/images/Structure.jpeg)
 
 # Setting up the environment
 
